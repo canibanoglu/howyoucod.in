@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38402802-1']);
+		  _gaq.push(['_setDomainName', 'howyoucod.in']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+		<title>How You Codin'? - Writing HTML & CSS, Part I</title>
+
+	<body>
+				<div class="wrapper">
+				<div class="header"></div>
+				<div class="sidebarwrapper">
+					<div class="barcontent">
+						<ul>
+							<li><strong><a href="/">Home</a></strong></li>
+							<li><a href="/about.html">About</a></li>
+							<li><a href="/htmlcssindex.html">HTML & CSS</a></li>
+						</ul>
+					</div>
+				</div>
+			<div class="contentwrapper">
+				<div class="contentbar">
+				<h4>Foreplay</h4>
+				<p class="content">So, this is the first instalment of my HTML and CSS adventures. Before I start talking about what I did with the pages and why I did them in that manner, I will talk a little bit about why I'm going with the very arduous task of writing the whole web page in only HTML and CSS.</p>
+				
+				<p class="content">For those of you who haven't read the about page, this site came to life after I finished the Web Fundamentals track on <a class="contentlink" href="http://www.codecademy.com/tracks/web">Codecademy</a>. I decided that I'd have to start doing some work with HTML and CSS so that I don't forget what I've learned during the course. I usually wait until I learn all the bits and pieces of a tool (HTML and CSS in this case) before I try to do something. After some stimulation, I figured that I'd have to put something online as soon as possible.</p>
+				
+				<p class="content">I know that this site looks like a blog so far and I think it <em>is</em> a blog of some sort. With that in mind, some could argue that using WordPress or a similar service would be a much better idea and they'd be right except the fact that this a learning experience for me. WP and similar tools allows you to deliver your content without giving a thought about <em>how</em> to deliver that content. They are great for some people but not for me, because I <em>want</em> to learn how this stuff works and since you're reading these line, I assume that you do as well (or you are a friend of mine who just wants to see what I've done so far with the site).</p>
+				
+				<p class="content">Disclaimer: I'm just a beginner with HTML and CSS, so I'm guessing that most of the stuff that I did so far can be done in a better way. You will also notice that there is nothing else on the site, no JavaScript, no node.js, no backbone.js, no nothing. The reason: I don't know anything about them at the moment. I will start learning JavaScript and when I do, I will start adding scripts to the site and discuss the code. But until then, this is all.</p>
+				
+				<p class="content">With all that out of the way, let's dig in!</p>
+				
+				<h4>Files that you may find useful</h4>
+				
+				<p class="content">Before I start talking about specific sections of the site code, I'd like to present links to a couple of pages on the site. I would like to give txt links to the stylesheet, the about page and the index page. There are other pages on the site, but they have all been written in the same manner. In fact, I copy/pasted the index page for all the other pages and rewrote the content part for each page.
+					<ul>
+						<li>The stylesheet - <a class="contentlink" href="/files/stylesheet.txt">stylesheet.txt</a></li>
+						<li>The homepage - <a class="contentlink" href="/files/index.txt">index.txt</a></li>
+						<li>The about page - <a class="contentlink" href="/files/about.txt">about.txt</a></li>
+						<li>This page (Writing HTML & CSS, Part I) - <a class="contentlink" href="/files/htmlcssone.txt">htmlcssone.txt</a>
+					</ul>
+					Or you could just right click on the page and select "Show Source" or the equivalent based on your browser.<br />
+					Note: I don't know how to make the links open in new tabs automagically yet, so you have to do it yourself for now</p>
+				
+				<h4>Writing the HTML code</h4>
+				
+				<p class="content">Take a look at the codes for the homepage and the about page. Remember the part about me saying that there's no JavaScript on any of the pages? Well that was not true in the strictest sense, every page has one script that I got from Google Analytics which keeps track of visitors. But even I don't have any idea how that works, so we'll skip over that part.
+				
+				I won't talk about what each tag does, there are sites which explain them much better than I ever could.</p>
+				
+				<p class="content">I will talk about the <code>&ltdiv&gt</code> tag though.</p>
+				<p class="content">If you're like me and just trying to write something with what you've learned so far, you'll soon see that you <strong>have to</strong> use this tag. It will most likely drive you crazy at first (it still drives me crazy) but you'll probably know deep down that it is a must if you want to have some kind of layout in your page. For example, I have used 6 different <code>&ltdiv&gt</code> tags in this page.</p>
+				
+				<p class="content">A <code>&ltdiv&gt</code> tag basically creates an <em>area</em> in your page. If you have no idea what I meant by that, go ahead and create a div and make its height and width 50 px and give it a border (<code>&ltdiv style="height:50px; width: 50px; border:1px solid black"&gt&lt/div&gt</code>). You'll see that you have a square sitting in your page.</p>
+				
+				<p class="content">So why do we use the <code>&ltdiv&gt</code> tag? See the sidebar which gives links to various sections of the site and how it's apart from the body of the text (the part that you're reading)? In order to separate the two, we need to add content to each in its own <em>box</em>. At this point you might be saying "OK, that's all good and dandy, but why did you have to use <em>6</em> different boxes for the whole page? From what you've said so far, it sounds like you could have gotten away with only two <code>&ltdiv&gt</code> tags." The honest answer is that, I'm not quite sure that I <em>had</em> to use 6 of them but I know for sure that I couldn't have achieved this look with only two. Here's why.</p>
+				
+				<p class="content">Take a look at the purple bars at the top and the bottom of every page. Notice something (not the awesome shade of purple)? They extend only so far, no matter how big your browser window is. That is achieved with using a <code>&ltdiv&gt</code> with a class called "wrapper". You can call it anything you like, but it appears to me that the convention is to call these "boxes" wrappers. You will also notice that I use wrappers for the sidebar and the content. These wrappers make sure that these stay apart. Then I have the actual content <code>&ltdiv&gt</code> tags for the sidebar and the content. I admit that I'm not entirely sure why we need these for this specific page but I can think of other uses for more complex pages. But I found that redundancy is usually a good thing so I kept these.</p>
+				
+				<h4>Why do we use wrappers?</h4>
+				
+				<p class="content">I admit that I didn't learn about wrappers from Codecademy. I found out about them while reading the HTML and CSS codes of many sites before writing the basic layout of this site. I'm not going to say that they made sense right away but I could feel that these are great tools to organise the look of your website.</p>
+				
+				<p class="content">My advice would be to create some <code>&ltdiv&gt</code>s and play around with them. Remember to give them borders so you can identify them visually. Create wrappers around sections and see how the wrapper and the inner <code>&ltdiv&gt</code> interact with each other. It gets clearer when you spend more time with it.</p>
+				
+				<h4>Writing the CSS code</h4>
+				
+				<p class="content">If you thought writing HTML only was confusing, think again. To a beginner, CSS is much more complicated. I had no problem going through the CSS examples on Codecademy but everything is easier when the instructional text points in the right direction. When you sit down in front of your text editor with only an idea of what you want your site to look like, everything gets a whole lot more complicated.</p>
+				
+				<p class="content">When writing the index page (the first ever page of this site) I wrote a small HTML code and decided to hack away at the CSS to get it into good shape. Bad idea! When you don't have a general idea about how your site will look like, playing with CSS is a very daunting task. After 2 hours of extremely frustrating attempts, I gave up. After a small break I took a pen and paper and drew what I wanted the site to look like. I will put up a picture of that paper soon. As you can see, the site is very, very minimalistic but at least having something to guide me was of tremendous value. If you're thinking of starting a website, this should be the first thing you do before writing one line of code. I learned it the hard way!</p>
+				
+				<p class="content">So you have your drawing and some ideas about how to approach the CSS section. If you're a CSS beginner like me, don't try to add a stylesheet to your HTML code just yet. Instead create another HTML file and place loads of <code>&ltdiv&gt</code>s inside it. Move them on the page with another CSS file. Place a couple of them inside each other and add dummy content inside them. Make notes of how they react to this. Sometimes they react in the most unexpected ways and it can be quite daunting. I almost gave up on the whole site. Just keep at it!</p>
+				
+				<h4>A small note about this page</h4>
+				
+				<p class="content">As I said, all the pages on the site have been written by modifying the content part of the homepage's HTML code. They all feature the same tags over and over again. But while I was writing this page, I had to learn another tag, <code>&ltcode&gt</code>.</p>
+				
+				<p class="content">The <code>&ltcode&gt</code> tag just identifies what's written inside the opening and closing as piece of computer code. It gives the text inside it a different font. But that still won't let you print &lt and &gt on your page! That was quite frustrating! After a couple of Google searches I learned how to write tags as content so that the browser doesn't execute them as HTML tags when loading the page.</p>
+				
+				<p class="content"> The trick is to write a special string instead of the usual < and >. <code>&amp;lt</code> stands for less-than and is the equivalent of &lt. <code>&amp;gt</code> stands for greater-than and is the equivalent of &gt.</p>
+				
+				<h4>Another small note about this page (!)</h4>
+				
+				<p class="content">This will sound extremely stupid but in order to show you <code>&amp;lt</code> and <code>&amp;gt</code> as you see them on page now (as strings) I had to search for other tags. It turns out that just like < and >, any time your browser sees <code>&amp;lt</code> or <code>&amp;gt</code>, it will render them. I came across the <code>&ltxmp&gt</code> and <code>&ltpre&gt</code> tags but neither did what I wanted them to do. In order to be able to write <code>&amp;lt</code> on the screen you place <code>amp;</code> between <code>&</code> and <code>lt</code>. Check the page source in the above link if you want to see it for yourself.</p>
+				
+				<h4>Closing notes</h4>
+				
+				<p class="content">That's pretty much how I wrote the code for this site. It took me the better part of a day to come up with the basic template and currently I'm just extending the content section of the site for new pages (ie. no CSS black magic). I will start playing with the CSS file to try some new stuff, like changing the way the sidebar links look, and I will talk about how that went in a future post.</p>
+				
+				<h4>Tips</h4>
+				<p class="content">Here are some tips that I can give to other beginners:</p>
+					<ul style="list-style-type: disc">
+						<li>Make your code readable. Believe me you don't want to crawl through a very badly structred code.</li>
+						<li>While trying to make sense of how multiple <code>&ltdiv&gt</code> tags work, give them all borders of different colors. This will help you identify which <code>&ltdiv&gt</code> you're dealing with.</li>
+						<li>Start small! Don't write up your whole content in one go. Work with dummy files to get an idea about how you can create the layout for your site.</li>
+						<li>Be patient and when it starts to feel like you're going to suffocate, take a break. It worked wonders with me.</li>
+				
+
+
+
+
+</div>
+			</div>
+			<div class="footer"></div>
+			<div class="hiddenfooter"></div>
+			</div>	
+		
+		
+	</body>
+</html>
+				
+				
+				

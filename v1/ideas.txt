@@ -1,0 +1,8 @@
+For the about page (or the history page):
+
+<p>I've been programming for about a year and a half in Python. I can't say that I did something noteworthy or even remotely interesting but I had so much fun learning that I don't even care. Plus, it had a huge impact in certain areas of my life. I will write a longer post about why learning how to program is a good idea for a lot of people.</p>
+
+<p>I won't go into much detail here (which is reserved for either the about page or a currently-non-existent history page), but after a while I've met the excellent<a href="www.codecademy.com">Codecademy</a>.</p>
+
+<p>Codecademy is a great site. They have a great way of introducing people to the world of programming. Although I haven't started my programming journey with them, they are almost certainly the biggest factor for me to join
+
